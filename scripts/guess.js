@@ -10,6 +10,9 @@ const msg = document.querySelector('.message');
 const body = document.querySelector('body');
 const soft = document.querySelector('.soft')
 const love = document.querySelector('.love')
+const passionfruit = document.querySelector('.passionfruit')
+let labelscore = document.querySelector(".label-score")
+let labelhighscore = document.querySelector(".label-highscore")
 
 
 // Creating sounds to play
@@ -26,6 +29,15 @@ const playloseSound = function(){
 }
 const playgameOverSound = function(){
     gameOver.play()
+}
+
+// Creating images to show
+const showWinImage = new Image('../giphy.gif')
+
+
+// Function to add image after win
+const winImage = ()=>{
+
 }
 
 
@@ -46,24 +58,28 @@ if (guess.value == null || guess.value < 1 || guess.value > 5 || guess.value == 
 }else if(guess.value == randomNum){
     playwinSound()
     display.innerHTML = "Correct!!!";
+    display.style.color = "green";
     number.innerHTML = randomNum;
     body.classList.remove("fail")
     body.classList.remove("body")
     body.classList.add("correct")
     soft.innerHTML = "You win"
+    msg.style.color = "orange"
+    labelscore.style.color = "orange"
+    labelhighscore.style.color = "orange"
     setTimeout(()=>soft.innerHTML = "", 5000)
 }else if(trials.innerHTML == 0){
     playgameOverSound()
     display.innerHTML = "Game Over!!!";
     body.classList.remove("fail")
     body.classList.remove("correct")
-    body.classList.add("body")
-    guess.value = ""
-    number.innerHTML = "?"
-    check.setAttribute("disabled", "true")
-    msg.innerHTML = "Play again!!"
-    love.innerHTML = "You lose"
-    setTimeout(()=>love.innerHTML = "", 5000)
+    body.classList.add("body");
+    guess.value = "";
+    number.innerHTML = "?";
+    check.setAttribute("disabled", "true");
+    msg.innerHTML = "Play again!!";
+    love.innerHTML = "You lose";
+    setTimeout(()=>love.innerHTML = "", 5000);
 
 }else{
     playloseSound()

@@ -8,7 +8,8 @@
     text-decoration: none;
 }
 .correct{
-    background-color: green;
+    /* background-color: green; */
+    background: url("../images/giphy.gif");
 }
 .fail{
     background-color: red;
