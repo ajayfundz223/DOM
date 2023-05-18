@@ -134,3 +134,25 @@ button{
         margin-top: 1rem;
     }
 }
+
+/* Animations */
+.number{
+    animation: rotate 1s ease-in;
+}
+@keyframes rotate{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-15px);
+    }
+    50%{
+        transform: translateX(15px);
+    }
+    75%{
+        transform: translateX(-15px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
