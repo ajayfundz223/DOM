@@ -1,0 +1,14 @@
+.my-div{
+    width: 250px;
+    height: 150px;
+    background-color: aqua;
+    color: black;
+}
+
+.my-div2{
+    width: 250px;
+    height: 150px;
+    background-color: firebrick;
+    color: white;
+    font-size: large;
+}
